@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Gennedy Anne Opina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6lBpLq1oH6UccKdfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h2>Gennedy Anne Opina</h2>
+        <nav>
+            <ul>
+                <li><a href="#" class="home-link">Home <i class="fas fa-home"></i></a></li>
+                <li><a href="#cellgroup" class="cellgroup-link">Cellgroup <i class="fas fa-church"></i></a></li>
+                <li><a href="#encounter" class="encounter-link">Encounter <i class="fas fa-dove"></i></a></li>
+                <li><a href="#baptism" class="baptism-link">Baptism <i class="fas fa-water"></i></a></li>
+                <li><a href="#conference" class="conference-link">Conference <i class="fas fa-users"></i></a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hi, Im Gennedy Anne Opina</h1>
+            <h2>Disciple</h2>
+            <p>"Matthew 28:19-20
+                Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.".</p>
+        </div>
+        <div class="hero-image">
+            <img src="C:\Users\gennedy\OneDrive\Pictures\Saved Pictures\414353766_692909356286637_4781364610614258393_n.jpg" alt="Gennedy Anne Opina">
+        </div>
+    </div>
+
+    <div id="cellgroup" class="section">
+        <img src="C:\Users\gennedy\OneDrive\Pictures\Saved Pictures\421336169_707405468170359_2676146549031006211_n.jpg" alt="Cellgroup Image">
+    </div>
+
+    <div id="encounter" class="section">
+        <img src="C:\Users\gennedy\OneDrive\Pictures\Saved Pictures\411716015_687088046868768_1924673121505302282_n.jpg" alt="Encounter Image">
+    </div>
+
+    <div id="baptism" class="section">
+        <img src="C:\Users\gennedy\OneDrive\Pictures\Saved Pictures\414361096_692912609619645_3564789181230293068_n.jpg" alt="Baptism Image">
+    </div>
+
+    <div id="conference" class="section">
+        <img src="C:\Users\gennedy\OneDrive\Pictures\Saved Pictures\467677224_122133494300385132_459776039681825898_n.jpg" alt="Conference Image">
+    </div>
+
+    <script>
+        const homeLink = document.querySelector('.home-link');
+        const cellgroupLink = document.querySelector('.cellgroup-link');
+        const encounterLink = document.querySelector('.encounter-link');
+        const baptismLink = document.querySelector('.baptism-link');
+        const conferenceLink = document.querySelector('.conference-link');
+
+        const cellgroupSection = document.getElementById('cellgroup');
+        const encounterSection = document.getElementById('encounter');
+        const baptismSection = document.getElementById('baptism');
+        const conferenceSection = document.getElementById('conference');
+
+        const showSection = (sectionId) => {
+            document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        };
+
+        const showHome = () => {
+            document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+        };
+
+        cellgroupLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSection('cellgroup');
+        });
+
+        encounterLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSection('encounter');
+        });
+
+        baptismLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSection('baptism');
+        });
+
+        conferenceLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSection('conference');
+        });
+
+        homeLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            showHome();
+        });
+    </script>
+</body>
+</html>
